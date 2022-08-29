@@ -1,0 +1,4 @@
+picamera==1.13
+python-dotenv==0.20.0
+RPi.GPIO==0.7.1
+schedule==1.1.0
