@@ -113,15 +113,11 @@ def restart():
 
 #----- Main program with defined tasks -----
 
-#schedule.every().day.at("09:00:00").do(lambda: activate_pump(RELAY_PIN, 35))
-#schedule.every().day.at("09:01:00").do(lambda: snap_picture())
-#schedule.every().day.at("09:01:20").do(lambda: email_notification())
-#schedule.every().sunday.at("18:00:00").do(lambda: restart())
-#schedule.every().wednesday.at("18:00:00").do(lambda: restart())
-
-schedule.every(3).hours.do(lambda: snap_picture())
-schedule.every(3).hours.do(lambda: email_notification())
-schedule.every(4).hours.do(lambda: restart())
+schedule.every().day.at("09:00:00").do(lambda: activate_pump(RELAY_PIN, 35))
+schedule.every().day.at("09:01:00").do(lambda: snap_picture())
+schedule.every().day.at("09:01:20").do(lambda: email_notification())
+schedule.every().sunday.at("18:00:00").do(lambda: restart())
+schedule.every().wednesday.at("18:00:00").do(lambda: restart())
 
 try:
     while True:
