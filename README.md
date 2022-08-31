@@ -1,11 +1,50 @@
 # RPirrigo - automated watering system
 
-## Required packages
+The motivation for this project was to put a Raspberry Pi in action in order to water the plants of my appartment. This with the aim to guarantee their survival during 
+the summer break.
 
-The application requires the packages indicated on this [file](https://github.com/AaronMillOro/RPirrigo/blob/main/requirements.txt). 
+The developed system triggers two peristaltic pumps during a given
+period of time (seconds), mainly to control the amount of water. Then, the Pi camera module is activated and takes a picture of the plants. Enventually, an email is sent with the lastest picture recorded. At each action, a log file stores the different actions of the program.
+
+To do so, this project has two main blocs: the hardware elecronics and 
+the software logic.
+
+# Hardware
+
+The used elements were: 
+
+* A Raspberry Pi 3b+ (RPi)
+* A couple of 12 V peristaltic pumps 
+* A 12 V (constant current) power source
+* One 2-channel relay module of 5V (very important to be triggered at 5 V)
+* Plastic tubes of 4 and 7 mm internal and external diameter, respectively
+* Simple aquarium air regulators to control the water flow
+* One gallon container to keep the water reservoir
+* Cables
+* (optional) Pi camera module 5M
+* (optional) Wood box to attach the elements, in this case a used a Porto wine box
+
+![RPi 3b+ GPIO distribution](https://github.com/AaronMillOro/RPirrigo/blob/main/img/rpi_gpio.png)
+
+![pumps and Pi cam attached to a Porto wine wood box](https://github.com/AaronMillOro/RPirrigo/blob/main/img/pumps_cam.png)
+
+![5V relay channel next to RPi and peristaltic pumps](https://github.com/AaronMillOro/RPirrigo/blob/main/img/relay.png)
+
+# Software
+
+The logic was implement on python 3.8. The application requires the packages indicated on this [file](https://github.com/AaronMillOro/RPirrigo/blob/main/requirements.txt). 
 
 ```
 pip install -r requirements.txt
+```
+
+In addition,  a directory named **img/** must be created at the same level of 
+the directory **src/**. The snapshots will be stored on that directory.
+
+```
+user@pc:~/RPirrigo$ ls
+
+img  README.md  requirements.txt  src
 ```
 
 ## Sensitive data
@@ -45,5 +84,7 @@ After reboot the following command allows to verify the declared cron task.
 ```
 systemctl status cron
 ```
+
+![system in action](https://github.com/AaronMillOro/RPirrigo/blob/main/img/watering_syst.png)
 
 Enjoy! :shipit:
