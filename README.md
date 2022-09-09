@@ -1,22 +1,20 @@
 # RPirrigo - automated watering system
 
-The motivation for this project was to put a Raspberry Pi in action in order to water the plants of my appartment. This with the aim to guarantee their survival during 
-the summer break.
+The motivation for this project was to put a Raspberry Pi in action in order to water the plants of my appartment. This with the aim to guarantee their survival during the summer break.
 
 The developed system triggers two peristaltic pumps during a given
 period of time (seconds), mainly to control the amount of water. Then, the Pi camera module is activated and takes a picture of the plants. Enventually, an email is sent with the lastest picture recorded. At each action, a log file stores the different actions of the program.
 
-To do so, this project has two main blocs: the hardware elecronics and 
-the software logic.
+This project has two main blocs: the hardware elecronics and the software logic.
 
 # Hardware
 
-The used elements were: 
+The reauired elements were: 
 
-* A Raspberry Pi 3b+ (RPi)
-* A couple of 12 V peristaltic pumps 
-* A 12 V (constant current) power source
-* One 2-channel relay module of 5V (very important to be triggered at 5 V)
+* Raspberry Pi 3b+ (RPi)
+* Two peristaltic pumps operated at 12 V
+* Power source of 12 V DC
+* A 2-channel relay module of 5V (very important to be triggered at 5 V)
 * Plastic tubes of 4 and 7 mm internal and external diameter, respectively
 * Simple aquarium air regulators to control the water flow
 * One gallon container to keep the water reservoir
@@ -24,7 +22,14 @@ The used elements were:
 * (optional) Pi camera module 5M
 * (optional) Wood box to attach the elements, in this case a used a Porto wine box
 
-![RPi 3b+ GPIO distribution](https://github.com/AaronMillOro/RPirrigo/blob/main/img/rpi_gpio.png)
+<figure>
+  <img
+  src="https://github.com/AaronMillOro/RPirrigo/blob/main/img/rpi_gpio.png"
+  alt="RPi 3b+ GPIO distribution">
+  <figcaption>General Purpose Inputs/Outputs (GPIO) distribution of the RPi model 3b+</figcaption>
+</figure>
+
+
 
 ![pumps and Pi cam attached to a Porto wine wood box](https://github.com/AaronMillOro/RPirrigo/blob/main/img/pumps_cam.png)
 
