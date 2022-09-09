@@ -22,6 +22,11 @@ The reauired elements were:
 * (optional) Pi camera module 5M
 * (optional) Wood box to attach the elements, in this case a used a Porto wine box
 
+Below the distribution of the GPIOs of the RPi model 3b+. For this project, I connected the following pins:
+* #2 (5 V) to power the relay
+* #4 to the ground of the relay
+* #16 and #32 to trigger the signals for the pumps 
+
 <figure>
   <img
   src="https://github.com/AaronMillOro/RPirrigo/blob/main/img/rpi_gpio.png"
@@ -29,9 +34,19 @@ The reauired elements were:
   <figcaption>General Purpose Inputs/Outputs (GPIO) distribution of the RPi model 3b+</figcaption>
 </figure>
 
+The circuits connections are detailed in the following picture.
 
+<figure>
+  <img
+  src="https://github.com/AaronMillOro/RPirrigo/blob/main/img/hardware.png"
+  alt="hardware circuits">
+  <figcaption>Connection of the RPi components with the relay, the peristaltic pumps and the Pi cam</figcaption>
+</figure>
+
+Some images of the watering system
 
 ![pumps and Pi cam attached to a Porto wine wood box](https://github.com/AaronMillOro/RPirrigo/blob/main/img/pumps_cam.png)
+
 
 ![5V relay channel next to RPi and peristaltic pumps](https://github.com/AaronMillOro/RPirrigo/blob/main/img/relay.png)
 
@@ -90,6 +105,12 @@ After reboot the following command allows to verify the declared cron task.
 systemctl status cron
 ```
 
-![system in action](https://github.com/AaronMillOro/RPirrigo/blob/main/img/watering_syst.png)
+<figure>
+  <img
+  src="https://github.com/AaronMillOro/RPirrigo/blob/main/img/watering_syst.png"
+  alt="watering system in action">
+  <figcaption>System in action</figcaption>
+</figure>
+
 
 Enjoy! :shipit:
