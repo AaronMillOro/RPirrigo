@@ -40,15 +40,13 @@ The circuits connections are detailed in the following picture.
   <img
   src="https://github.com/AaronMillOro/RPirrigo/blob/main/img/hardware.png"
   alt="hardware circuits">
-  <figcaption>Connection of the RPi components with the relay, the peristaltic pumps and the Pi cam</figcaption>
+  <figcaption>Connection of the RPi components with the relay, the peristaltic pumps and the Pi cam</figcaption><br>
 </figure>
 
-Some images of the watering system
-
-![pumps and Pi cam attached to a Porto wine wood box](https://github.com/AaronMillOro/RPirrigo/blob/main/img/pumps_cam.png)
 
 
-![5V relay channel next to RPi and peristaltic pumps](https://github.com/AaronMillOro/RPirrigo/blob/main/img/relay.png)
+![pumps and Pi cam attached to a Porto wine wood box](https://github.com/AaronMillOro/RPirrigo/blob/main/img/watersys.gif)
+
 
 # Software
 
@@ -109,7 +107,7 @@ systemctl status cron
   <img
   src="https://github.com/AaronMillOro/RPirrigo/blob/main/img/watering_syst.png"
   alt="watering system in action">
-  <figcaption>System in action</figcaption>
+  <figcaption>System in action</figcaption><br>
 </figure>
 
 
